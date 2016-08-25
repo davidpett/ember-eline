@@ -2,17 +2,19 @@ import Ember from 'ember';
 
 const {
   computed,
-  get,
-  set
+  get
 } = Ember;
 
 export default Ember.Controller.extend({
-  color: null,
+  color: {
+    'color_one': '#fbf2d5',
+    'color_two': '#4f6aa5'
+  },
   strokeWidth: 3,
   size: 96,
 
   hexToRgb(value) {
-    let val = value || '#000000';
+    let val = value;
     let color = val.substring(1);
     return {
       r: parseInt(color.substring(0, 2), 16),
@@ -25,10 +27,11 @@ export default Ember.Controller.extend({
   }),
 
   init() {
-    Ember.$.getJSON('http://www.randoma11y.com/stats/').then((data) => {
-      let colors = data['most_active_20'];
-      let color = colors[Math.floor(Math.random() * colors.length)];
-      set(this, 'color', color);
-    });
+    this._super(...arguments);
+    // Ember.$.getJSON('http://www.randoma11y.com/stats/').then((data) => {
+    //   let colors = data['most_active_20'];
+    //   let color = colors[Math.floor(Math.random() * colors.length)];
+    //   set(this, 'color', color);
+    // });
   }
 });
