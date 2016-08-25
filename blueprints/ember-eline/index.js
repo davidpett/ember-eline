@@ -3,6 +3,9 @@ module.exports = {
   normalizeEntityName: function() {},
 
   afterInstall: function() {
-    return this.addPackageToProject('understyle');
+    var that = this;
+    return that.addPackageToProject('understyle').then(function() {
+      that.addPackageToProject('ember-browserify');
+    });
   }
 };
