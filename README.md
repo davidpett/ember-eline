@@ -1,4 +1,4 @@
-# Ember-eline
+# ember-eline
 
 ## Installation
 
