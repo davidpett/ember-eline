@@ -1,6 +1,6 @@
 {
   "name": "ember-eline",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Ember SVG line icon components ported from http://jxnblk.com/reline/",
   "directories": {
     "doc": "doc",
