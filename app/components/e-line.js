@@ -1,12 +1,11 @@
 import Ember from 'ember';
 import layout from '../templates/components/e-line';
-import understyle from 'npm:understyle';
+import margin from '../utils/margin';
 
 const {
   computed,
   get,
-  String: { dasherize, htmlSafe },
-  toArray
+  String: { dasherize, htmlSafe }
 } = Ember;
 
 export default Ember.Component.extend({
@@ -42,7 +41,7 @@ export default Ember.Component.extend({
         margins[key] = parseInt(margins[key]);
       }
     }
-    let marginsStyle = understyle.margin(margins);
+    let marginsStyle = margin(margins);
     if (Object.keys(marginsStyle).length) {
       for (let key in marginsStyle) {
         result.push(`${dasherize(key)}: ${marginsStyle[key]}px`);

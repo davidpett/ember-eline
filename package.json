@@ -40,8 +40,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.10",
-    "understyle": "^1.2.0"
+    "loader.js": "^4.0.10"
   },
   "keywords": [
     "ember-addon",
@@ -50,11 +49,8 @@
     "icons"
   ],
   "dependencies": {
-    "broccoli-funnel": "^1.0.1",
-    "broccoli-merge-trees": "^1.1.1",
     "ember-cli-babel": "^5.1.7",
-    "ember-cli-htmlbars": "^1.0.10",
-    "resolve": "^1.1.7"
+    "ember-cli-htmlbars": "^1.0.10"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
