@@ -40,8 +40,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
-    ENV.rootUrl = '/ember-eline/';
-
+    ENV.rootURL = '/ember-eline/';
   }
 
   return ENV;
