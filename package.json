@@ -1,7 +1,7 @@
 {
   "name": "ember-eline",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember SVG line icon components ported from http://jxnblk.com/reline/",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,13 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/davidpett/ember-eline",
+  "bugs": "https://github.com/davidpett/ember-eline/issues",
+  "homepage": "http://davidpett.github.io/ember-eline/",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "David Pett",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -42,7 +44,10 @@
     "understyle": "^1.2.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "svg",
+    "icon",
+    "icons"
   ],
   "dependencies": {
     "broccoli-funnel": "^1.0.1",
@@ -52,6 +57,7 @@
     "resolve": "^1.1.7"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "http://davidpett.github.io/ember-data-contentful/"
   }
 }

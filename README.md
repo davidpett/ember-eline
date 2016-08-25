@@ -1,5 +1,7 @@
 # ember-eline
 
+Ember SVG line icon components ported from http://jxnblk.com/reline/
+
 ## Installation
 
 ```ember install ember-eline```
