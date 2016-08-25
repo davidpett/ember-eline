@@ -1,27 +1,40 @@
 # Ember-eline
 
-This README outlines the details of collaborating on this Ember addon.
-
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-eline`
-* `npm install`
-* `bower install`
+```ember install ember-eline```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+You can easily use the provided components `{{e-icon}}` with the many properties to create your icons.
 
-## Running Tests
+### Properties
+* `name` - key for icon name, one of the following:
+  * `x` _(default)_
+  * `plus`
+  * `minus`
+  * `burger`
+  * `square`
+  * `diamond`
+  * `chevron`
+  * `arrow`
+  * `triangle`
+* `direction` - use with "chevron", "arrow", or "triangle"
+  * `up`
+  * `down`
+  * `left`
+  * `right` _(default)_
+* `size` - _default "16"_
+* `strokeWidth` - _default "3"_
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+In addition, it supports the margin properties from [understyle](https://github.com/jxnblk/understyle#margin)
 
-## Building
+### Examples
+```
+{{e-icon name="triangle" direction="left" size="24" strokeWidth="1"}}
+```
 
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+It is also possible to use the `{{e-line}}` component and pass a `path` property. This works if you are using the [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers) addon.
+```
+{{e-line path=(array (array 0 0) (array 16 16))}}
+```

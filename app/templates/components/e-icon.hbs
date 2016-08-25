@@ -1,0 +1,7 @@
+{{#e-line strokeWidth=strokeWidth size=size m=m mt=mt mr=mr mb=mb ml=ml mx=mx my=my}}
+  {{#if paths.length}}
+    {{#each paths as |p|}}
+      <path d="{{eline p}}" />
+    {{/each}}
+  {{/if}}
+{{/e-line}}

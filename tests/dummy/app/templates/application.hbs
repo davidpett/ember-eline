@@ -1,0 +1,234 @@
+<style media="screen">
+  hr {
+    border: 0;
+    height: 1px;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-clip: content-box;
+    background-color: rgba({{colorOneRgb.r}}, {{colorOneRgb.g}}, {{colorOneRgb.b}}, 0.2);
+    border-radius: 999px;
+    height: 6px;
+  }
+  input[type="range"]:focus {
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: 0;
+    border: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 999px;
+    background-color: currentColor;
+    cursor: pointer;
+  }
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: 0;
+    border: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 999px;
+    background-color: currentColor;
+    cursor: pointer;
+  }
+  svg {
+    transition: all 0.3s ease-out;
+  }
+  {{#if color}}
+    body {
+      background-color: {{color.color_two}};
+      color: {{color.color_one}};
+    }
+    a {
+      color: {{color.color_one}};
+    }
+    hr {
+      background: {{color.color_one}};
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      background-color: {{color.color_one}};
+    }
+    input[type="range"]::-moz-range-thumb {
+      background-color: {{color.color_one}};
+    }
+  {{/if}}
+</style>
+<div class="p4">
+  <div>
+    <h1 class="h1">Eline</h1>
+    <p>
+      Ember SVG line icon components. Ported from <a href="http://jxnblk.com/reline/">Reline</a> by <a href="http://twitter.com/jxnblk">@jxnblk</a>
+    </p>
+    <a href="https://github.com/davidpett/ember-eline" class="caps bold">Github</a>
+  </div>
+  <hr class="my4">
+  <div class="flex content-stretch px2 mb1">
+    <div class="mr1 pb2" style="width: 100%">
+      <label for="size" class="h5">Size {{size}}</label>
+      <input name="size"
+        type="range"
+        class="mt1"
+        style="width: 100%"
+        value={{size}}
+        step="8"
+        min=8
+        max=128
+        oninput={{action (action (mut size) value="target.value")}} />
+    </div>
+    <div class="ml1 pb2" style="width: 100%">
+      <label for="strokeWidth" class="h5">Stroke Width {{strokeWidth}}</label>
+      <input name="strokeWidth"
+        type="range"
+        class="mt1"
+        style="width: 100%"
+        value={{strokeWidth}}
+        step="0.5"
+        min=0.5
+        max=8
+        oninput={{action (action (mut strokeWidth) value="target.value")}} />
+    </div>
+  </div>
+  <div>
+    {{e-icon name="x" size=size strokeWidth=strokeWidth m="2"}}
+    {{e-icon name="plus" size=size strokeWidth=strokeWidth m="2"}}
+    {{e-icon name="minus" size=size strokeWidth=strokeWidth m="2"}}
+    {{e-icon name="burger" size=size strokeWidth=strokeWidth m="2"}}
+    {{e-icon name="square" size=size strokeWidth=strokeWidth m="2"}}
+    {{e-icon name="chevron" size=size strokeWidth=strokeWidth m="2"}}
+    {{e-icon name="arrow" size=size strokeWidth=strokeWidth m="2"}}
+    {{e-icon name="triangle" size=size strokeWidth=strokeWidth m="2" direction="up"}}
+  </div>
+  <hr class="my4">
+  <div>
+    {{e-icon name="x" size="48" m="2"}}
+    {{e-icon name="plus" size="48" m="2"}}
+    {{e-icon name="minus" size="48" m="2"}}
+    {{e-icon name="burger" size="48" m="2"}}
+    {{e-icon name="square" size="48" m="2"}}
+    {{e-icon name="diamond" size="48" m="2"}}
+    {{e-icon name="chevron" size="48" direction="up" m="2"}}
+    {{e-icon name="chevron" size="48" direction="down" m="2"}}
+    {{e-icon name="chevron" size="48" direction="left" m="2"}}
+    {{e-icon name="chevron" size="48" direction="right" m="2"}}
+    {{e-icon name="arrow" size="48" direction="up" m="2"}}
+    {{e-icon name="arrow" size="48" direction="down" m="2"}}
+    {{e-icon name="arrow" size="48" direction="left" m="2"}}
+    {{e-icon name="arrow" size="48" direction="right" m="2"}}
+    {{e-icon name="triangle" size="48" direction="up" m="2"}}
+    {{e-icon name="triangle" size="48" direction="down" m="2"}}
+    {{e-icon name="triangle" size="48" direction="left" m="2"}}
+    {{e-icon name="triangle" size="48" direction="right" m="2"}}
+  </div>
+  <div>
+    {{e-icon name="x" size="32" m="2"}}
+    {{e-icon name="plus" size="32" m="2"}}
+    {{e-icon name="minus" size="32" m="2"}}
+    {{e-icon name="burger" size="32" m="2"}}
+    {{e-icon name="square" size="32" m="2"}}
+    {{e-icon name="diamond" size="32" m="2"}}
+    {{e-icon name="chevron" size="32" direction="up" m="2"}}
+    {{e-icon name="chevron" size="32" direction="down" m="2"}}
+    {{e-icon name="chevron" size="32" direction="left" m="2"}}
+    {{e-icon name="chevron" size="32" direction="right" m="2"}}
+    {{e-icon name="arrow" size="32" direction="up" m="2"}}
+    {{e-icon name="arrow" size="32" direction="down" m="2"}}
+    {{e-icon name="arrow" size="32" direction="left" m="2"}}
+    {{e-icon name="arrow" size="32" direction="right" m="2"}}
+    {{e-icon name="triangle" size="32" direction="up" m="2"}}
+    {{e-icon name="triangle" size="32" direction="down" m="2"}}
+    {{e-icon name="triangle" size="32" direction="left" m="2"}}
+    {{e-icon name="triangle" size="32" direction="right" m="2"}}
+  </div>
+  <div>
+    {{e-icon name="x" m="2"}}
+    {{e-icon name="plus" m="2"}}
+    {{e-icon name="minus" m="2"}}
+    {{e-icon name="burger" m="2"}}
+    {{e-icon name="square" m="2"}}
+    {{e-icon name="diamond" m="2"}}
+    {{e-icon name="chevron" direction="up" m="2"}}
+    {{e-icon name="chevron" direction="down" m="2"}}
+    {{e-icon name="chevron" direction="left" m="2"}}
+    {{e-icon name="chevron" direction="right" m="2"}}
+    {{e-icon name="arrow" direction="up" m="2"}}
+    {{e-icon name="arrow" direction="down" m="2"}}
+    {{e-icon name="arrow" direction="left" m="2"}}
+    {{e-icon name="arrow" direction="right" m="2"}}
+    {{e-icon name="triangle" direction="up" m="2"}}
+    {{e-icon name="triangle" direction="down" m="2"}}
+    {{e-icon name="triangle" direction="left" m="2"}}
+    {{e-icon name="triangle" direction="right" m="2"}}
+  </div>
+  <hr class="my4">
+  <h2 class="h2">Sizes</h2>
+  <div>
+    {{e-icon size="256" m="2"}}
+    {{e-icon size="192" m="2"}}
+    {{e-icon size="128" m="2"}}
+    {{e-icon size="96" m="2"}}
+    {{e-icon size="64" m="2"}}
+    {{e-icon size="48" m="2"}}
+    {{e-icon size="32" m="2"}}
+    {{e-icon size="24" m="2"}}
+    {{e-icon size="16" m="2"}}
+    {{e-icon size="12" m="2"}}
+    {{e-icon size="8" m="2"}}
+  </div>
+  <hr class="my4">
+  <h2 class="h2">Stroke Widths</h2>
+  <div>
+    {{e-icon strokeWidth="6" m="2"}}
+    {{e-icon strokeWidth="4" m="2"}}
+    {{e-icon strokeWidth="3" m="2"}}
+    {{e-icon strokeWidth="2" m="2"}}
+    {{e-icon strokeWidth="1" m="2"}}
+    {{e-icon strokeWidth="0.5" m="2"}}
+  </div>
+  <hr class="my4">
+  <div>
+    <h2 class="h2">Chevron</h2>
+    {{e-icon name="chevron" direction="up" m="2"}}
+    {{e-icon name="chevron" direction="down" m="2"}}
+    {{e-icon name="chevron" direction="left" m="2"}}
+    {{e-icon name="chevron" direction="right" m="2"}}
+  </div>
+  <div>
+    <h2 class="h2">Arrow</h2>
+    {{e-icon name="arrow" direction="up" m="2"}}
+    {{e-icon name="arrow" direction="down" m="2"}}
+    {{e-icon name="arrow" direction="left" m="2"}}
+    {{e-icon name="arrow" direction="right" m="2"}}
+  </div>
+  <div>
+    <h2 class="h2">Triangle</h2>
+    {{e-icon name="triangle" direction="up" m="2"}}
+    {{e-icon name="triangle" direction="down" m="2"}}
+    {{e-icon name="triangle" direction="left" m="2"}}
+    {{e-icon name="triangle" direction="right" m="2"}}
+  </div>
+  <div>
+    <h2 class="h2">Misc</h2>
+    {{e-icon name="x" m="2"}}
+    {{e-icon name="plus" m="2"}}
+    {{e-icon name="minus" m="2"}}
+    {{e-icon name="burger" m="2"}}
+    {{e-icon name="square" m="2"}}
+    {{e-icon name="diamond" m="2"}}
+  </div>
+  <hr class="my4">
+    <h2>Creating Straight Lines</h2>
+    {{e-line path=(array (array 0 8) (array 16 8)) m="2"}}
+    {{e-line path=(array (array 8 0) (array 8 16)) m="2"}}
+    {{e-line path=(array (array 0 0) (array 16 16)) m="2"}}
+    {{e-line path=(array (array 16 0) (array 0 16)) m="2"}}
+    {{e-line path=(array (array 0 16) (array 0 8) (array 16 8) (array 16 0)) m="2"}}
+  <hr class="my4">
+  <footer>
+    <a href="http://jxnblk.com" class="caps bold mr2">Made by jxnblk</a> <a href="http://davidpett.com" class="caps bold">Ported by David Pett</a>
+  </footer>
+</div>

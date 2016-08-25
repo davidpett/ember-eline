@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dummy</title>
+    <title>ember-eline</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
 
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/dummy.css">
+    <link href="https://npmcdn.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <style media="screen">
+      body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.5;margin:0;}
+    </style>
 
     {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
+    <div style="position:absolute;top:0;right:0;margin:16px;">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="ember-eline: Ember SVG line icon components ported from http://jxnblk.com/reline/ by @jxnblk" data-via="pettpett" data-related="jxnblk" data-show-count="false">Tweet</a>
+    </div><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/dummy.js"></script>
-
     {{content-for "body-footer"}}
   </body>
 </html>
